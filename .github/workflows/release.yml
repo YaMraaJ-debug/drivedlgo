@@ -23,7 +23,7 @@ jobs:
           go-version: latest
       -
         name: Run GoReleaser
-        uses: goreleaser/goreleaser-action@v1
+        uses: actions/create-release@v1
         with:
           version: latest
           args: release --rm-dist
