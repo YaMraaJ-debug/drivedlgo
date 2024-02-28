@@ -27,13 +27,5 @@ jobs:
         with:
           version: latest
           args: release --rm-dist
-      -
-        name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        with:
-          tag_name: ${{ github.event.ref }}
-          draft: false
-          prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
